@@ -1,7 +1,7 @@
 CXX      = ../em++
-CXXFLAGS = -Wall -ansi -g
+CXXFLAGS = -Wall -ansi -g --emrun
 CC       = ../emcc
-CCFLAGS  = -g
+CCFLAGS  = -g --emrun
 OBJS     = src/main.o src/processInWindows.o src/DecisionTreeClass.o src/aweighting.o src/featureExtraction.o src/kiss_fft130/kiss_fft.o
 
 windDet : $(OBJS)

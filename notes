@@ -1,5 +1,11 @@
 (I have emscripten in the parent directory)
 
 ../emmake make
-../emcc windDet.bc -o windDet.js --embed-file trees/dectrees_10_5000 --embed-file test
+
+
+../emcc windDet.bc -o windDet.js  --embed-file trees/dectrees_10_5000 --embed-file test 
+
+../emcc  windDet.bc  -o windDet.html -embed-file trees/dectrees_10_5000 --embed-file test 
 node windDet.js "-i" "test/iphone1.wav" "-o" "test/iphone1.txt" "-t" "1" "-g" "1" "-f" "43" "-w" "25"
+
+../emrun  windDet.html "-i" "test/iphone1.wav" "-o" "test/iphone1.txt" "-t" "1" "-g" "1" "-f" "43" "-w" "25"
